@@ -9,10 +9,15 @@ export default async function Home() {
   const data = await payload.find({
     // @ts-ignore
     collection: "categories",
-    depth: 0,
+    depth: 1, //populate sub categories
+    where: {
+      parent: {
+        exists: false,
+      },
+    },
   });
 
-  return (
-    <div className="flex flex-col gap-y-4">{JSON.stringify(data, null, 2)}</div>
-  );
+  console.log(data);
+
+  return <div className="flex flex-col gap-y-4">\</div>;
 }

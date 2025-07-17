@@ -7,6 +7,7 @@ export const GET = async () => {
   });
 
   const data = await payload.find({
+    // @ts-ignore
     collection: "categories",
   });
 

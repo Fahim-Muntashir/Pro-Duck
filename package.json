@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-types": "payload types generate --output ./src/payload-types.ts"
+    "generate-types": "payload types generate --output ./src/payload-types.ts",
+    "db:fresh": "payload migrate:fresh"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
